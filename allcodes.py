@@ -16,3 +16,6 @@ plt.imshow(some_digit_image, cmap=matplotlib.cm.binary,
            interpolation='nearest')
 plt.axis("off")
 plt.show()
+
+x_train, x_test = x[:60000], x[6000:70000]
+y_train, y_test = y[:60000], y[6000:70000]
