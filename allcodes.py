@@ -19,3 +19,12 @@ plt.show()
 
 x_train, x_test = x[:60000], x[6000:70000]
 y_train, y_test = y[:60000], y[6000:70000]
+
+shuffle_index = np.random.permutation(60000)
+x_train, y_train = x_train.[shuffle_index], y_train.[shuffle_index]
+
+# Creating a 2-detector
+y_train = y_train.astype(np.int8)
+y_test = y_test.astype(np.int8)
+y_train_2 = (y_train == '2')
+y_test_2 = (y_test == '2')
