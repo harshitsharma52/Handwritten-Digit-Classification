@@ -34,3 +34,8 @@ clf = LogisticRegression(tol=0.1)
 clf.fit(x_train, y_train_2)
 example = clf.predict([some_digit])
 print(example)
+
+# Cross Validation
+a = cross_val_score(clf, x_train, y_train_2, cv=3, scoring="accuracy")
+print(a.mean())
+
