@@ -28,3 +28,9 @@ y_train = y_train.astype(np.int8)
 y_test = y_test.astype(np.int8)
 y_train_2 = (y_train == '2')
 y_test_2 = (y_test == '2')
+
+# Train a logistic regression classifier
+clf = LogisticRegression(tol=0.1)
+clf.fit(x_train, y_train_2)
+example = clf.predict([some_digit])
+print(example)
